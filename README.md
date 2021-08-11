@@ -8,12 +8,12 @@ it does not require several GPUs to be trained, and it became pretty common in d
 ## Description of solution (step-by-step)
 
 ### 1. Data.
-Data was downloaded from the following pages:
+Data was downloaded from the following pages (`scrape.py`):
 1. https://www.rev.com/blog/transcript-tag/donald-trump-interview-transcripts
 2. https://www.kaggle.com/mrisdal/2016-us-presidential-debates
 3. https://www.kaggle.com/headsortails/us-election-2020-presidential-debates/version/7
 ### 2. Data preprocessing, preparing datasets.
-Downloaded data is transformed to context windows, so that current phrase and 7 previous phrases 
+Downloaded data is transformed to context windows (`preprocess.py`), so that current phrase and 7 previous phrases 
 are used in training and validation data. About training and validation datasets: 
 simple train_test_split with 0.85/0/15 ratio is used. Shuffle is True per default.
 ### 3. Model architecture.
@@ -24,7 +24,7 @@ which is pretty good dataset to simulate communication on the internet
 There are 3 DialoGPT models with different number of parameters, 
 small DialoGPT 117M model was used in this project due to computational resources problem.
 ### 4. Training and evaluation.
-Model is fine-tuned, so we do not train one from scratch. Train loop includes 3 epochs.
+Model is fine-tuned (`train.py`), so we do not train one from scratch. Train loop includes 3 epochs.
 Fine-tuning was performed with the help of Google Colab. You can find training notebook, 
 as well as training data here via [the link](https://drive.google.com/drive/folders/1YU2igVUUQ0FTJcfo8iMG1yM51AYab4kW?usp=sharing).
 
@@ -44,7 +44,9 @@ https://user-images.githubusercontent.com/27633882/129045854-0c6e6b09-daaa-4c49-
 
 
 ## Results
-Just simple dialog model was trained, which is not perfect. 
+Just simple dialog model was trained, which is not perfect, but still conversation with bot 
+frequently looks like a conversation with Donald Trump seen on a TV or on the internet in its atmosphere. 
+And sometimes, bot can cite previous present of the USA.
 With more data and GPUs it can be significantly improved. Also, 
 postprocessing outputs of model can improve quality of answers (but in another iteration). 
 For example, put Trump / non-Trump classifier on top of dialog model will adjust outputs more precisely.
