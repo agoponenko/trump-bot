@@ -38,6 +38,11 @@ The training scripts and model configuration is mostly based on
 python run.py
 ```
 
+
+https://user-images.githubusercontent.com/27633882/129045854-0c6e6b09-daaa-4c49-acc3-ed8897d39e09.mov
+
+
+
 ## Results
 Just simple dialog model was trained, which is not perfect. 
 With more data and GPUs it can be significantly improved. Also, 
