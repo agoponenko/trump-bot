@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/27633882/129045854-0c6e6b09-daaa-4c49-
 ## Results
 Just simple dialog model was trained, which is not perfect, but still conversation with bot 
 frequently looks like a conversation with Donald Trump seen on a TV or on the internet in its atmosphere. 
-And sometimes, bot can cite previous present of the USA.
+And sometimes, bot speaks just like the previous president of the USA.
 With more data and GPUs it can be significantly improved. Also, 
 postprocessing outputs of model can improve quality of answers (but in another iteration). 
 For example, put Trump / non-Trump classifier on top of dialog model will adjust outputs more precisely.
