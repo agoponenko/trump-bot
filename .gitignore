@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+/apex
+cached/
+/data
+/runs
+*.csv
+*.ipynb
+.DS_Store
+.idea/
