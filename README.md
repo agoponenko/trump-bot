@@ -32,8 +32,20 @@ as well as training data here via [the link](https://drive.google.com/drive/fold
 The training scripts and model configuration is mostly based on 
 [this great tutorial](https://nathancooper.io/i-am-a-nerd/chatbot/deep-learning/gpt2/2020/05/12/chatbot-part-1.html).
 
+## Installation
 
-### Running
+### Prerequisites
+
+- Python 3.9
+- To use fine-tuned model, download to current folder model's `output-small` folder
+
+### Requirements
+
+```
+pip install -r requirements.txt
+```
+
+## Running
 ```
 python run.py
 ```
